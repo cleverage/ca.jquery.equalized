@@ -43,7 +43,7 @@ var BASE_URL = 'http://localhost:8000/tests';
       title : 'Equalized height (auto)',
       fn    : function (test) {
         casper.echo(getTestTitle(1));
-        testValues(test, 'A', 'height', {a:'41px',b:'40px',c:'40px'});
+        testValues(test, 'A', 'height', {a:'40px',b:'40px',c:'40px'});
 
         casper.echo(getTestTitle(2));
         testValues(test, 'B', 'height', {a:'40px',b:'40px',c:'40px'});
