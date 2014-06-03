@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<title>1.2.1 : Equalized width (auto)</title>
+
+<!-- <script src="//code.jquery.com/jquery-1.9.0.js"></script> -->
+<script src="assets/jquery.js"></script>
+<script src="assets/html.js"></script>
+<script src="../ca.jquery.equalized.js"></script>
+
+<link rel="stylesheet" href="assets/styles.css">
+
+<h1>1.2.1 : Equalized width (auto)</h1>
+
+<p>Those tests check what happens when we try to equalized a height automaticaly.</p>
+
+
+<section>
+<h2>Test A: Pass an object with the value 'auto' (width)</h2>
+
+<p>All three blocks must have the same width as the <code>c</code> element.</p>
+
+<h3>HTML</h3>
+<pre></pre>
+
+<h3>CSS</h3>
+<style>
+#A .a { width: 20px; }
+#A .b { width: 30px; }
+#A .c { width: 40px; }
+</style>
+
+<h3>JS</h3>
+<script>
+$(function () {
+  $('#A div').equalized({
+    width: 'auto'
+  });
+});
+</script>
+
+<h3>Result</h3>
+<div class="test" id="A">
+  <div class="a"></div>
+  <div class="b"></div>
+  <div class="c"></div>
+</div>
+</section>

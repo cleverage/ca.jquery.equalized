@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<title>2.3.2 : Equalized all groups (explicite)</title>
+
+<!-- <script src="//code.jquery.com/jquery-1.9.0.js"></script> -->
+<script src="assets/jquery.js"></script>
+<script src="assets/html.js"></script>
+<script src="../ca.jquery.equalized.js"></script>
+
+<link rel="stylesheet" href="assets/styles.css">
+
+<h1>2.3.2 : Equalized all groups (explicite)</h1>
+
+<p>Those tests check what happens when we try to equalized all groups at the same time.</p>
+
+
+<section>
+<h2>Test A: Explicite global equalization</h2>
+
+<p>The <code>second</code> group (2nd block and 3rd block) should be ignored as it is define with the <code>data-equalized</code> attribute: each block of this group should keep their own height. The elements of the <code>first</code> group (1st and 4th block) should have the same height: 40px. The elements of the <code>third</code> group (5th block and 6th block) should have the same height: 70px.</p>
+
+<h3>HTML</h3>
+<pre></pre>
+
+<h3>CSS</h3>
+<style>
+#A  .a { height: 20px; }
+#A  .b { height: 30px; }
+#A  .c { height: 40px; }
+#AA .d { height: 50px; }
+#AA .e { height: 70px; }
+#AA .f { height: 60px; }
+</style>
+
+<h3>JS</h3>
+<script>
+$(function () {
+  $(document)
+    .equalized({
+      group    : 'all',
+      attribute: 'data-equale'
+    });
+});
+</script>
+
+<h3>Result</h3>
+<div class="test" id="A">
+  <div class="a" data-equale="first"></div>
+  <div class="b" data-equalize="second"></div>
+  <div class="c" data-equalize="second"></div>
+</div>
+
+<div class="test" id="AA">
+  <div class="d" data-equale="first"></div>
+  <div class="e" data-equale="third"></div>
+  <div class="f" data-equale="third"></div>
+</div>
+</section>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<title>1.2.2: Equalized width (number)</title>
+
+<!-- <script src="//code.jquery.com/jquery-1.9.0.js"></script> -->
+<script src="assets/jquery.js"></script>
+<script src="assets/html.js"></script>
+<script src="../ca.jquery.equalized.js"></script>
+
+<link rel="stylesheet" href="assets/styles.css">
+
+<h1>1.2.2 : Equalized width (number)</h1>
+
+<p>Those tests check what happens when we try to equalized a width with a number.</p>
+
+
+<section>
+<h2>Test A: Use an object with a positive number (width)</h2>
+
+<p>All three blocks should have the same width: 50px.</p>
+
+<h3>HTML</h3>
+<pre></pre>
+
+<h3>CSS</h3>
+<style>
+#A .a { width: 20px; }
+#A .b { width: 30px; }
+#A .c { width: 40px; }
+</style>
+
+<h3>JS</h3>
+<script>
+$(function () {
+  $('#A div').equalized({
+    width: 50
+  });
+});
+</script>
+
+<h3>Result</h3>
+<div class="test" id="A">
+  <div class="a"></div>
+  <div class="b"></div>
+  <div class="c"></div>
+</div>
+</section>
+
+
+<section>
+<h2>Test B: Use an object with a negative number (width)</h2>
+
+<p>All three blocks should keep their orginal width.</p>
+
+<h3>HTML</h3>
+<pre></pre>
+
+<h3>CSS</h3>
+<style>
+#B .a { width: 20px; }
+#B .b { width: 30px; }
+#B .c { width: 40px; }
+</style>
+
+<h3>JS</h3>
+<script>
+$(function () {
+  $('#B div').equalized({
+    width: -50
+  });
+});
+</script>
+
+<h3>Result</h3>
+<div class="test" id="B">
+  <div class="a"></div>
+  <div class="b"></div>
+  <div class="c"></div>
+</div>
+</section>

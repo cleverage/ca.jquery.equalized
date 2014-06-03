@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<title>2.3.3 : Reset all groups (false)</title>
+
+<!-- <script src="//code.jquery.com/jquery-1.9.0.js"></script> -->
+<script src="assets/jquery.js"></script>
+<script src="assets/html.js"></script>
+<script src="../ca.jquery.equalized.js"></script>
+
+<link rel="stylesheet" href="assets/styles.css">
+
+<h1>2.3.3 : Reset all groups (false)</h1>
+
+<p>Those tests check what happens when we try to globaly reset group equalization.</p>
+
+
+<section>
+<h2>Test A: Reset equalization</h2>
+
+<p>All block should have their size back.</p>
+
+<h3>HTML</h3>
+<pre></pre>
+
+<h3>CSS</h3>
+<style>
+#A .a { height: 20px; width: 20px; }
+#A .b { height: 30px; width: 30px; }
+#A .c { height: 40px; width: 40px; }
+#A .d { height: 50px; width: 50px; }
+</style>
+
+<h3>JS</h3>
+<script>
+$(function () {
+  $.fn.equalized.defaults.width = 'auto';
+
+  $(document)
+    .equalized()
+    .equalized(false);
+});
+</script>
+
+<h3>Result</h3>
+<div class="test" id="A">
+  <div class="a" data-equalized="first"></div>
+  <div class="b" data-equalized="second"></div>
+  <div class="c" data-equalized="second"></div>
+  <div class="d" data-equalized="first"></div>
+</div>
+</section>
