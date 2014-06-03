@@ -1,3 +1,5 @@
+[![Build Status](https://api.travis-ci.org/cleverage/ca.jquery.equalized.svg?branch=master)](https://api.travis-ci.org/cleverage/ca.jquery.equalized)
+
 jQuery Equalized Plug-in
 ========================
 

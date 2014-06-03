@@ -1,3 +1,5 @@
+[![Build Status](https://api.travis-ci.org/cleverage/ca.jquery.equalized.svg?branch=master)](https://api.travis-ci.org/cleverage/ca.jquery.equalized)
+
 jQuery Equalized Plug-in
 ========================
 
@@ -9,43 +11,43 @@ n'est pas possible, c'est là que ce plug-in peut vous aider.
 API
 ---
 
-La methode d'initialisation du plugin est `equalized()`
+La méthode d'initialisation du plugin est `equalized()`
 
 ```javascript
 $('.equilize_me').equalized(options)
 ```
 
-Cette methode accept un objet de paramètrage qui accepte jusqu'à 4 propriétés.
-Elle accepte également des formes racourcis (chaine ou nombres) pour simplifier
+Cette methode accept un objet de paramètrage qui a jusqu'à 4 propriétés.
+Elle accepte également des formes racourcis (chaines ou nombres) pour simplifier
 les usages les plus courants.
 
 ### Les propriétés de l'objet de confguration
 
 #### `height`
 
-Cette propriété permet de determiner comment la hauteurs des elements va être
-égalisée. Elle accepte 4 type de valeurs possible:
+Cette propriété permet de déterminer comment la hauteur des elements va être
+égalisée. Elle accepte 4 types de valeurs possibles:
 
-* `{falsy}` : Toute valeur "falsy" (qui peut être compris comme `false`)
-              désactive l'égalisation des hauteurs.
-* `auto`    : Le plug-in va calculer automatiquement la hauteur à appliquer.
-              Il va prendre la hauteur la plus importante de tous les éléments
-              du groupe à égaliser et l'appliquer à tous les autres.
-* {number>0}: Tout nombre superieur à zero est considéré comme la hauteur en
-              pixel à appliquer à tous les éléments du groupe à égaliser.
-* {selector}: N'importe quel chaine de caractère autre que `auto` est utilisée
-              comme un selecteur jQuery. La hauteur du premier élément retourné
-              par ce selecteur est appliquée à l'ensemble des éléments du groupe
-              à égaliser. Si ce selecteur commence par le caractère `>`, il sera
-              alors utilisé comme un filtre pour selectionner l'élément du
-              groupe à utiliser pour definir la hauteur d'égalisation.
+* `{falsy}`   : Toute valeur _falsy_ (qui peut être compris comme `false`)
+                désactive l'égalisation des hauteurs.
+* `auto`      : Le plug-in va calculer automatiquement la hauteur à appliquer.
+                Il va prendre la plus grande hauteur parmis tous les éléments
+                du groupe à égaliser et l'appliquer à tous les autres.
+* `{number>0}`: Tout nombre superieur à zero est considéré comme la hauteur en
+                pixel à appliquer à tous les éléments du groupe à égaliser.
+* `{selector}`: N'importe quel chaine de caractère autre que `auto` est utilisée
+                comme un selecteur jQuery. La hauteur du premier élément retourné
+                par ce selecteur est appliquée à l'ensemble des éléments du groupe
+                à égaliser. Si ce selecteur commence par le caractère `>`, il sera
+                alors utilisé comme un filtre pour selectionner l'élément du
+                groupe à utiliser pour definir la hauteur d'égalisation.
 
 La valeur par défaut de cette propriété est `auto`.
 
 #### `width`
 
 Cette propriété permet de determiner comment la largeur des elements va être
-égalisée. Elle accepte les même type de valeur que la propriété `height`.
+égalisée. Elle accepte les même types de valeur que la propriété `height`.
 
 La valeur par défaut de cette propriété est `false`.
 
@@ -88,7 +90,7 @@ Plutot que de passer un objet de configuration à la fonction `equalized`, on
 peut lui passer un nombre ou une chaine de caractère. Dans ces cas là, le
 plugin se comportera comme si on lui avait passé un objet `{height:valeur}`.
 
-Les deux examples suivant sont strictement identique:
+Les deux examples suivant sont strictement identiques:
 
 ```javascript
 $('.equilize_me').equalized(100);
@@ -119,4 +121,4 @@ en modifiant l'objet `$.fn.equalized.defaults`.
 
 ### Impact sur CSS
 
-Le plug-in va modifer les propriétés `width` et `height` et seulement celles-ci.
+Le plug-in va modifer les propriétés `width` et `height` des éléments et seulement celles-ci.
