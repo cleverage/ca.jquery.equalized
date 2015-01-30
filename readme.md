@@ -28,18 +28,18 @@ some shortcut (string or number) to ease the most common usage.
 This property defines how the height of the elements must be equilized. It can
 take on of the following values:
 
-* `{falsy}` : Any falsy value will prevent the equalization of the height.
-* `auto`    : The plug-in will automatically compute the height to apply. It
-              will use the height of the highest element of the group to
-              equalize.
-* {number>0}: Any number greater than zero is considered as the height (in
-              pixels) to apply to the group of elements to equalize.
-* {selector}: Any string other than `auto` is used as a jQuery selector. The
-              height of the first element found with this selector is applied
-              to the whole group of elements to equalize. If the selector starts
-              with `>`, it will be used as a filter against the group of elements
-              to determine which element's height will be used to equalise that
-              group.
+* `{falsy}`   : Any falsy value will prevent the equalization of the height.
+* `auto`      : The plug-in will automatically compute the height to apply. It
+                will use the height of the highest element of the group to
+                equalize.
+* `{number>0}`: Any number greater than zero is considered as the height (in
+                pixels) to apply to the group of elements to equalize.
+* `{selector}`: Any string other than `auto` is used as a jQuery selector. The
+                height of the first element found with this selector is applied
+                to the whole group of elements to equalize. If the selector starts
+                with `>`, it will be used as a filter against the group of elements
+                to determine which element's height will be used to equalise that
+                group.
 
 The default value for this property is `auto`.
 
@@ -55,15 +55,15 @@ The default value for this property is `false`.
 This property indicates which group of elements must be equalized. It can take
 three possible values:
 
-* {falsy} : Any falsy values indicates that set of current elements must be
-            equalized.
-* `all`   : Indicates that all groups will be equalized. Each group is processed
-            one at a time. _This can have some serious performance issues if
-            there are many groups on the page_.
-* {id}    : All other values are considered a group identifier. All elements
-            with the attribute defined by the `attribute` property, with the same
-            value as the one define by this property, are all part of the same
-            equalizing group.
+* `{falsy}`: Any falsy values indicates that set of current elements must be
+             equalized.
+* `all`    : Indicates that all groups will be equalized. Each group is processed
+             one at a time. _This can have some serious performance issues if
+             there are many groups on the page_.
+* `{id}`   : All other values are considered a group identifier. All elements
+             with the attribute defined by the `attribute` property, with the same
+             value as the one define by this property, are all part of the same
+             equalizing group.
 
 The default value for this property is `false`, except for a jQuery object
 wrapping the `document` or `window` object. In such cases, the default value
@@ -115,7 +115,7 @@ $('.equilize_me').equalized({
 ### Overload default parameters.
 
 It's possible to read and overload the default values of each parameter by
-accessing the `$.fn.sticky.defaults` object.
+accessing the `$.fn.equalized.defaults` object.
 
 
 ### Impact on CSS

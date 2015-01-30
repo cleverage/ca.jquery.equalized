@@ -56,16 +56,16 @@ La valeur par défaut de cette propriété est `false`.
 Cette propriété permet d'indiquer quel groupe d'élément doit être égalisé. Elle
 accepte 3 valeurs possibles :
 
-* {falsy} : Toute valeur "falsy" (qui peut être compris comme `false`) indique
-            que l'ensemble d'élément courant doit être égalisé.
-* `all`   : Indique que tous les groupes vont être égalisés. Chaque groupe est
-            traité individuellement chacun à son tour. _Cela peut avoir un
-            impact de performance s'il y a de nombreux groupes dans la page_.
-* {id}    : Toute autre valeur est considérée comme un identifiant de groupe.
-            Tous les éléments portant l'attribut défini par la propriété
-            `attribute` et dont la valeur est égale à cet identifiant sont
-            considérés comme faisant partie du même groupe et seront égalisés
-            entre eux.
+* `{falsy}`: Toute valeur "falsy" (qui peut être compris comme `false`) indique
+             que l'ensemble d'élément courant doit être égalisé.
+* `all`    : Indique que tous les groupes vont être égalisés. Chaque groupe est
+             traité individuellement chacun à son tour. _Cela peut avoir un
+             impact de performance s'il y a de nombreux groupes dans la page_.
+* `{id}`   : Toute autre valeur est considérée comme un identifiant de groupe.
+             Tous les éléments portant l'attribut défini par la propriété
+             `attribute` et dont la valeur est égale à cet identifiant sont
+             considérés comme faisant partie du même groupe et seront égalisés
+             entre eux.
 
 La valeur par défaut de cette propriété est `false`, sauf pour un objet jQuery
 englobant les objet `document` ou `window`. Dans ce cas, la valeur par défaut
