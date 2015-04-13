@@ -114,16 +114,21 @@
   // * @param `group` {jQuery}
   // * @param `options` {object} : Must have a `width` and `height` property.
   function processGroup(group, options) {
-    // Retrieve numeric values for width and height
-    var w = getNumValue('width',  options.width,  group);
-    var h = getNumValue('height', options.height, group);
+    var w, h, css = {};
+    // do not remove existing value if `options.width` is set to `false`
+    if(options.width !== false) {
+      w = getNumValue('width',  options.width,  group);
+      // Retrieve numeric values for width
+      css.width  = w > 0 ? w : '';
+    }
+    // do not remove existing value if `options.height` is set to `false`
+    if(options.height !== false) {
+      h = getNumValue('height', options.height, group);
+      // Retrieve numeric values for height
+      css.height = h > 0 ? h : '';
+    }
 
-    group.each(function () {
-      $(this).css({
-        width : w > 0 ? w : '',
-        height: h > 0 ? h : ''
-      });
-    });
+    group.css(css);
   }
 
 
